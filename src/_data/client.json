@@ -1,0 +1,15 @@
+{
+	"name": "Click and Mortar Designs",
+	"email": "alexg@clickmortar.app",
+	"phoneForTel": "970-814-6993",
+	"phoneFormatted": "(970) 814-6993",
+	"address": {
+		"lineOne": "",
+		"lineTwo": "",
+		"city": "Grand Junction",
+		"state": "CO",
+		"zip": "81504",
+		"mapLink": "https://maps.app.goo.gl/MEBW3QEV3QM4KPVAA"
+	},
+	"domain": "www.clickmortar.app"
+}

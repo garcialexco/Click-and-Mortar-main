@@ -1,0 +1,500 @@
+---
+title: 'Precision-Crafted Websites'
+description: 'Discover the power of Click and Mortar Web Designs. We craft unique and visually striking websites tailored to help elevate small and medium businesses. Explore our comprehensive web solutions today!'
+preloadImg: '/assets/images/hero.webp'
+permalink: '/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css">
+    <link rel="stylesheet" href="/assets/css/critical.css">
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %} 
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1349">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Welcome To </span>
+            <h1 class="cs-title">Click and Mortar - Web Designs</h1>
+            <p class="cs-text">
+                No unnecessary code or page builders - We offer fast, high quality 100% hand-coded websites.
+            </p>
+            <a href="/contact" class="cs-button-solid">Free Consultation</a>
+        </div>
+    </div>
+    <!--Bubble Groups-->
+    <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+    <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero-small.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+        <img decoding="async" src="/assets/images/hero.webp" alt="abstract art hero image" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1362">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/people10.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/people10-small.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/people10.webp" alt="people" width="605868" height="690">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/gear-white.svg" alt="gear" width="60" height="60">
+                <span class="cs-desc">
+                    With Over 6 Years of Experience
+                </span>
+            </div>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Who  we are</span>
+            <h2 class="cs-title">Custom Websites for Startups, Creators and Small Businesses - Fast, Affordable and Unique.</h2>
+            <p class="cs-text">
+                Embark on a digital journey with Click and Mortar Web Designs, where imagination  meets web innovation.
+                As a small business ourselves, we offer our expertise of the online realm to craft immersive websites tailored to your business.
+            <p class="cs-text">
+                What sets us apart is not just our mastery in design and development, but our commitment to understanding your unique brand identity. With a fusion of creativity and technical prowess, we'll transform your company's vision into visually stunning, functional websites that resonate with your audience.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/trophy.svg" alt="icon" width="32" height="32">
+                        Stunning Designs
+                    </h3>
+                    <p class="cs-item-text">
+                        Exclusive Web Designs – No Two Are Ever the Same!
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="h3-cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/circle-check.svg" alt="icon" width="32" height="32">
+                        Quality Service
+                    </h3>
+                    <p class="cs-item-text">
+                        From Concept to Creation: Exceptional Service Every Step of the Way.
+                    </p>
+                </li>
+            </ul>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Mobile-First Approach - Responsive Designs for Every Device
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Fast Page Speed - Ace Google's Speed Test.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Pixel Perfect Designs - Every Website is Hand Designed for Your Business
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    SEO - Drive Traffic and Increase Visibility
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Accessible Design - Accessible to all users, including those with disabilities.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Dedicated Support - Ensure your website remains up-to-date, secure, and operates smoothly.
+                </li>
+            </ul>
+            <a href="/about" aria-label="Let's Build a Website" class="cs-button-solid">Let's Build a Website!</a>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1378">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">Empowering Small Businesses to Thrive Online</h2>
+            <p class="cs-text">Your business deserves more than just a website.
+            </p>
+            <p class="cs-text">
+            We create strategic, high-performing digital experiences that delight your customers, strengthen your brand, and drive real results. Every project is handled with the same goal: to make your online presence flawless, functional, and future-proof.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-layers.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Web Development</h3>
+                <p class="cs-item-text">Need a sleek portfolio, a high-converting e-commerce store, or a professional service site? We deliver clean, fast, and mobile-friendly websites designed to grow your brand.</p>
+                <p class="cs-item-text">Starting at: $500 (template-based, perfect for quick launches) / $1,500+ (custom design for a unique brand presence)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-media.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Responsive Web Design</h3>
+                <p class="cs-item-text">Your site should look and perform flawlessly on any device. We design mobile-first, responsive websites that adapt seamlessly to phones, tablets, and desktops, giving your visitors a smooth, engaging experience every time.</p>
+                <p class="cs-item-text">Starting at: Included with all builds / $300+ (responsive redesign of an existing site)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-alert.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">SEO (Search Engine Optimization)</h3>
+                <p class="cs-item-text">Boost your visibility and bring in organic traffic with strategic SEO. From keyword targeting to on-page optimization, we make sure your site ranks higher and reaches the right audience.</p>
+                <p class="cs-item-text">Starting at: $300 (SEO audit & optimization) / $600+ (ongoing monthly optimization & growth tracking)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-meter.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Fast Load Times</h3>
+                <p class="cs-item-text">Slow sites lose visitors. We optimize your website’s performance for lightning-fast load speeds, improving user experience and helping you rank higher on search engines.</p>
+                <p class="cs-item-text">Starting at: $150 (performance tune-up) / $300+ (full optimization & CDN setup)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-design.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Accessibility Optimization</h3>
+                <p class="cs-item-text">Make your website inclusive and compliant with accessibility standards. We ensure your site is user-friendly for all visitors, including those using assistive technologies.</p>
+                <p class="cs-item-text">Starting at: $200 (accessibility audit & fixes) / $500+ (full accessibility compliance)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/agency-image.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Maintenance & Support</h3>
+                <p class="cs-item-text">Keep your website secure, updated, and running at its best. We provide ongoing support, updates, and proactive monitoring so you can focus on your business.</p>
+                <p class="cs-item-text">Starting at: $75/mo (basic updates & monitoring) / $150+ (full maintenance & priority support)</p>
+                <a href="/services" class="cs-link" aria-label="Read more about our services">
+                    <img class="cs-arrow" decoding="async"
+                        src="/assets/svgs/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section> 
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="stats-316">
+    <ul class="cs-card-group">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="/assets/svgs/agency-meter-purple.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">99%</span>
+                <span class="cs-desc">Page Load Speed</span>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="/assets/svgs/brackets.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">9,000+</span>
+                <span class="cs-desc">Lines Coded</span>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="/assets/svgs/award.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">100%</span>
+                <span class="cs-desc">Satisfaction</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- ============================================ -->
+<!--                   Process                   -->
+<!-- ============================================ -->
+
+<section id="services-1290">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Process</span>
+                <h2 class="cs-title">How It Works</h2>
+            </div>
+            <p class="cs-text">
+                We can help you design your project and develop a comprehensive plan to ensure that it meets your
+                specific needs and requirements. We'll work closely with you and your team to
+                create a design that is both functional and aesthetically pleasing.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="/assets/images/construction-book.png">
+                        <source media="(min-width: 601px)"
+                            srcset="/assets/images/construction-book.png">
+                        <img loading="lazy" decoding="async"
+                            src="/assets/images/construction-book.png"
+                            alt="consulatation notes" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">01</span>
+                        Consultation
+                    </h3>
+                    <p class="cs-item-text">
+                        We will meet with you and your team to determine what message we want to convey, and the look and feel of the website.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="/assets/images/wireframe.jpg">
+                        <source media="(min-width: 601px)"
+                            srcset="/assets/images/wireframe.jpg">
+                        <img loading="lazy" decoding="async"
+                            src="/assets/images/wireframe.jpg"
+                            alt="wireframe design" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">02</span>
+                        Design
+                    </h3>
+                    <p class="cs-item-text">
+                        After the initial meeting, we'll get to work right away drawing up designs for your company's website.  
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/about" class="cs-link" aria-label="Read more about us">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="/assets/images/code.jpg">
+                        <source media="(min-width: 601px)"
+                            srcset="/assets/images/code.jpg">
+                        <img loading="lazy" decoding="async"
+                            src="/assets/images/code.jpg"
+                            alt="computer code" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">03</span>
+                        Development
+                    </h3>
+                    <p class="cs-item-text">
+                        Once we've made sure you're happy with the design, the coding and development begins.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="/assets/images/launch.jpg">
+                        <source media="(min-width: 601px)"
+                            srcset="/assets/images/launch.jpg">
+                        <img loading="lazy" decoding="async"
+                            src="/assets/images/launch.jpg"
+                            alt="variety of devices" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">04</span>
+                        Launch
+                    </h3>
+                    <p class="cs-item-text">
+                        Finally, after any edits are made, your website is launched and your brand's online precence is boosted for success!
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1373">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Performance</span>
+            <h2 class="cs-title">Elevate Your Online Performance</h2>
+            <p class="cs-text">
+                At Click and Mortar Web Designs, we don't just create websites; we redefine online success. We're passionate about delivering designs that captivate and functionalities that impress. Your business deserves more than a presence; it deserves to stand out. Let's take your vision to the next level. Contact us today, and let's build something extraordinary together.
+            </p>
+            <a href="/contact" class="cs-button-solid">Contact Now</a>
+        </div>
+        <div class="cs-flex">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/cafe.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/cafe.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/cafe.jpg" alt="people in cafe" width="414" height="627">
+            </picture>
+            <div class="cs-review">
+                <img class="cs-icon" loading="lazy" decoding="async" aria-hidden="true" src="/assets/svgs/quotes.svg" alt="appliance" width="120" height="99">
+                <p class="cs-review-text">
+                    "Your website is the canvas where pixels meet purpose. Every design choice, every line of code, contributes to the masterpiece that is your online presence. Make it a work of art that resonates." - Unknown
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1388">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get in Touch</h2>
+            <p class="cs-text">
+                Ready to transform your online presence? Reach out and let's kickstart the journey to creating a website that not only meets but exceeds your expectations. Contact us today, and let the collaboration begin.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:970-814-6993
+                        " class="cs-link">+1 (970) 814 6993
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/mail-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:alexg@clickmortar.app" class="cs-link">alexg@clickmortar.app</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1388" name="Contact Form" netlify>
+            <h3 class="cs-h3">Make Appointment</h3>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label cs-email">
+                Email
+                <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label cs-phone">
+                Phone
+                <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Write message..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    const leftOption = document.querySelector("#pricing-1387 #cs-option1-1387");
+        const rightOption = document.querySelector("#pricing-1387 #cs-option2-1387");
+        const toggle = document.querySelector("#pricing-1387 .cs-toggle");
+        const cardGroup = Array.from(document.querySelectorAll('#pricing-1387 .cs-card-group'))
+        // when you click the middle toggle
+        toggle.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.toggle("cs-active");
+            }
+            toggle.classList.toggle("active");
+        });       
+        // when you click the left button option
+        leftOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.remove("cs-active");
+            }
+            toggle.classList.remove("active");
+        });    
+        // when you click the right button option
+        rightOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.add("cs-active");
+            }
+            toggle.classList.add("active");
+        });
+</script>
+
+    {% include 'components/cta.html' %}
+{% endblock %}

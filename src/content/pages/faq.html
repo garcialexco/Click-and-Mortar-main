@@ -1,0 +1,130 @@
+---
+title: 'FAQ'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/hero.webp'
+permalink: 'faq/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/faq.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">FAQ</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/hero-small.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/hero.webp" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="#ececec"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+    <!--                     FAQ                      -->
+    <!-- ============================================ -->
+
+<div id="cs-wrapper-1411">
+    <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="reviews-1411">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Performance</span>
+                <h2 class="cs-title">Elevate Your Online Performance</h2>
+                <p class="cs-text">
+                    At Click and Mortar Web Designs, we don't just create websites; we redefine online success. We're passionate about delivering designs that captivate and functionalities that impress. Your business deserves more than a presence; it deserves to stand out. Let's take your vision to the next level. Contact us today, and let's build something extraordinary together.
+                </p>
+                <a href="/contact" class="cs-button-solid">Contact Now</a>
+            </div>
+        </div>
+        <div class="cs-bubbles" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                     FAQ                      -->
+    <!-- ============================================ -->
+
+    <section id="faq-1411">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Asked questions</span>
+                <h2 class="cs-title">Frequently Asked Questions</h2>
+                <ul class="cs-faq-group">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item active">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How long does it take to build a website?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            The timeline for building a website depends on the complexity and features required. Generally, a 5-page website can take a few weeks, but no more than a month. We work closely with you to establish realistic timelines and keep you informed at every step.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Can you redesign my existing website?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Certainly! We'll take your website and give your online presence a fresh, modern look. Whether it's a visual makeover or an overhaul of functionality, we tailor our redesigns to meet your specific goals. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Will my website be mobile-friendly?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            All our designs prioritize responsiveness, ensuring your website looks and functions seamlessly across all desktop, tablet and mobile devices. We understand the importance of reaching your audience wherever they are.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How do I get started with Click and Mortar Web Designs?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Getting started is easy! Simply reach out to us through our contact form, and we'll schedule a consultation to discuss your goals, answer any questions, and outline a plan tailored to your business.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                
+</script>
+    {% include 'components/cta.html' %}
+
+{% endblock %}

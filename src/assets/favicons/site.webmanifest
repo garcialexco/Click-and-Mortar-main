@@ -1,0 +1,14 @@
+{
+    "name": "Click & Mortar",
+    "short_name": "Click & Mortar",
+    "icons": [
+        {
+            "src": "/assets/favicons/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#5535a5",
+    "background_color": "#5535a5",
+    "display": "standalone"
+}
