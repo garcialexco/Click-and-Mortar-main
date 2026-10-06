@@ -2183,3 +2183,269 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---  Conversion Design Pass    -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #trust-strip {
+        padding: 1.15rem 1rem;
+        background: #0d131a;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        .cs-container {
+            width: 100%;
+            max-width: 80rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .cs-trust-label {
+            color: var(--primary);
+            font-size: 0.72rem;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+        }
+
+        .cs-trust-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+
+            span {
+                color: #d5dce4;
+                font-size: 0.9rem;
+                line-height: 1.2;
+                padding: 0.55rem 0.8rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.035);
+            }
+        }
+    }
+
+    body.dark-mode {
+        #sbs-1362 {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(255, 122, 26, 0.08), transparent 24rem),
+                #090d12;
+
+            .cs-image-group {
+                border-radius: 1.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.09);
+                box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+            }
+
+            .cs-box {
+                max-width: 18rem;
+                padding: 1.25rem;
+                border-radius: 1rem;
+                background: linear-gradient(135deg, var(--primary), #ffad5a);
+                opacity: 1;
+                gap: 0.75rem;
+                box-shadow: 0 16px 35px rgba(255, 122, 26, 0.2);
+
+                .cs-desc {
+                    color: #111;
+                }
+
+                .cs-box-icon {
+                    filter: brightness(0);
+                    width: 2.2rem;
+                }
+            }
+
+            .cs-item {
+                background: #111923;
+                border-color: rgba(255, 255, 255, 0.09);
+                border-radius: 1rem;
+            }
+
+            .cs-title {
+                max-width: 20ch;
+            }
+        }
+
+        #services-1378 {
+            background:
+                linear-gradient(180deg, #101720 0%, #0d131a 100%);
+
+            .cs-content {
+                margin-bottom: 1rem;
+            }
+
+            .cs-item {
+                min-height: 17rem;
+                padding: 1.5rem;
+                padding-top: 0;
+                background: #111923;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 1.15rem;
+                box-shadow: 0 16px 46px rgba(0, 0, 0, 0.16);
+                transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-0.35rem);
+                    background: #141e29;
+                    border-color: rgba(255, 122, 26, 0.55);
+
+                    .cs-picture {
+                        background: var(--primary);
+                    }
+
+                    .cs-h3,
+                    .cs-item-text {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .cs-picture {
+                background: #1b2733;
+                border-color: rgba(255, 255, 255, 0.12);
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+            }
+
+            .cs-link {
+                border-color: rgba(255, 255, 255, 0.16);
+            }
+        }
+
+        #services-1290 {
+            background: #090d12;
+
+            .cs-content {
+                max-width: 48rem;
+            }
+
+            .cs-item {
+                background: #111923;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 1rem;
+                padding: 0.75rem 0.75rem 1.2rem;
+                overflow: hidden;
+
+                &:hover {
+                    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+                    border-color: rgba(255, 122, 26, 0.45);
+                }
+
+                &::after {
+                    opacity: 0.35;
+                    filter: grayscale(1) brightness(1.8);
+                }
+            }
+
+            .cs-picture {
+                height: 10.5rem;
+                border-radius: 0.75rem;
+                background-color: #17212c;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(180deg, transparent 35%, rgba(9, 13, 18, 0.65));
+                    z-index: 1;
+                    pointer-events: none;
+                }
+            }
+
+            .cs-h3 {
+                padding: 0 0.4rem;
+                word-break: normal;
+            }
+
+            .cs-item-text {
+                padding: 0 0.4rem;
+            }
+        }
+
+        #contact-1388 {
+            background:
+                radial-gradient(circle at 15% 75%, rgba(255, 122, 26, 0.07), transparent 28rem),
+                #101720;
+
+            .cs-form {
+                background: #0d141c;
+                border: 1px solid rgba(255, 255, 255, 0.09);
+                box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+                border-radius: 1.25rem;
+            }
+
+            .cs-label {
+                color: #dbe2ea;
+            }
+
+            .cs-input {
+                color: #f7f8fa;
+                background: #111b25;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+                &:focus {
+                    outline: none;
+                    border-color: var(--primary);
+                    box-shadow: 0 0 0 3px rgba(255, 122, 26, 0.12);
+                }
+
+                &::placeholder {
+                    color: #8f9aa7;
+                    opacity: 0.8;
+                }
+            }
+
+            .cs-submit {
+                color: #111;
+                background: var(--primary);
+                border-radius: 0.8rem;
+
+                &:before {
+                    display: none;
+                }
+
+                &:hover {
+                    color: #111;
+                    background: var(--primaryLight);
+                }
+            }
+
+            .cs-form-note {
+                width: 100%;
+                margin: 0.35rem 0 0;
+                color: #8f9aa7;
+                font-size: 0.8rem;
+                line-height: 1.45;
+                text-align: center;
+            }
+
+            .cs-icon-wrapper {
+                border-color: rgba(255, 255, 255, 0.15);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #trust-strip {
+        .cs-container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cs-trust-label {
+            flex: none;
+        }
+
+        .cs-trust-points {
+            justify-content: flex-end;
+        }
+    }
+}
