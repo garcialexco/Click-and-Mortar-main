@@ -1718,3 +1718,123 @@ body.dark-mode #services-1378 .cs-link .cs-arrow {
   transition-timing-function: ease !important;
   transition-delay: 0ms !important;
 }
+
+
+/* =========================================================
+   Mobile QA pass
+   ========================================================= */
+
+@media (max-width: 47.99rem) {
+  /* Homepage/supporting-page hero image positioning */
+  #hero-1349 .cs-background img,
+  #banner-843 .cs-background img {
+    object-position: center center !important;
+  }
+
+  /* Services intro had double vertical spacing from the original
+     component gap + content margin. Tighten it into one clean rhythm. */
+  #services-1378 {
+    padding-top: 4.25rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  #services-1378 .cs-container {
+    gap: 3.35rem !important;
+  }
+
+  #services-1378 .cs-content {
+    margin-bottom: 0 !important;
+  }
+
+  #services-1378 .cs-title {
+    margin-bottom: 1rem !important;
+  }
+
+  #services-1378 .cs-text {
+    margin-bottom: 0 !important;
+    line-height: 1.65 !important;
+  }
+
+  #services-1378 .cs-card-group {
+    row-gap: 4.6rem !important;
+  }
+
+  /* Contact: give the intro, phone row and form clearer breathing room. */
+  #contact-1388 {
+    padding-top: 4.25rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  #contact-1388 .cs-container {
+    gap: 2rem !important;
+  }
+
+  #contact-1388 .cs-content {
+    margin-bottom: 0 !important;
+  }
+
+  #contact-1388 .cs-ul {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  #contact-1388 .cs-form {
+    padding: 1.25rem !important;
+  }
+
+  /* Footer: less dead air, cleaner nav rhythm, and no orphaned "|" line. */
+  #footer-1390 {
+    padding: 3.25rem 1rem 2.5rem !important;
+  }
+
+  #footer-1390 .cs-top {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    gap: 1.15rem !important;
+  }
+
+  #footer-1390 .cs-logo {
+    max-width: 10.5rem !important;
+  }
+
+  #footer-1390 .cs-ul {
+    row-gap: .55rem !important;
+    column-gap: 1.2rem !important;
+  }
+
+  #footer-1390 .cs-bottom {
+    gap: .6rem !important;
+    text-align: center;
+  }
+
+  #footer-1390 .cs-copyright,
+  #footer-1390 .cs-copyright-link {
+    font-size: .875rem !important;
+  }
+
+  #footer-1390 .cs-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+  }
+
+  #footer-1390 .cs-separater {
+    display: none !important;
+  }
+
+  /* FAQ: closing should feel immediate rather than leaving ghost text
+     while the old opacity/padding transition finishes. */
+  #faq-1411 .cs-item-p {
+    transition: none !important;
+  }
+
+  #faq-1411 .cs-faq-item.active .cs-item-p {
+    transition: opacity 140ms ease !important;
+  }
+
+  #faq-1411 .cs-button::before,
+  #faq-1411 .cs-button::after {
+    transition-duration: 220ms !important;
+  }
+}
