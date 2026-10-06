@@ -1568,3 +1568,96 @@ body.dark-mode #services-1378 .cs-item:hover .cs-link {
 body.dark-mode #services-1378 .cs-item:hover .cs-link .cs-arrow {
   filter: brightness(0) !important;
 }
+
+
+/* =========================================================
+   Interaction + radius consistency pass
+   ========================================================= */
+
+/* The floating service icons need a clean break in the card border,
+   but not another orange ring competing with the card itself. */
+body.dark-mode #services-1378 .cs-picture {
+  border-color: rgba(255,255,255,.13) !important;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,.10), rgba(255,122,26,.025)),
+    #1a2531 !important;
+  box-shadow:
+    0 0 0 .6rem #101720,
+    inset 0 1px 0 rgba(255,255,255,.045) !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-picture {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  transform: translateY(-.12rem) scale(1.025);
+}
+
+/* Kill the inherited wipe pseudo-elements that were making some
+   buttons turn dark / lose contrast on hover. */
+.cs-button-solid::before,
+.cs-button-transparent::before,
+.cs-button-secondary::before,
+.cs-submit::before,
+#pricing-1386 .cs-button-transparent::before {
+  display: none !important;
+  width: 0 !important;
+}
+
+/* One hover language across the site:
+   primary = orange -> lighter orange
+   secondary = outlined -> soft orange tint */
+.cs-button-solid,
+.cs-submit,
+#pricing-1386 .cs-popular .cs-button-transparent {
+  transition:
+    transform .2s ease,
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease !important;
+}
+
+.cs-button-solid:hover,
+.cs-submit:hover,
+#pricing-1386 .cs-popular .cs-button-transparent:hover {
+  transform: translateY(-2px);
+  background: var(--primaryLight) !important;
+  border-color: var(--primaryLight) !important;
+  color: #111 !important;
+}
+
+.cs-button-transparent,
+.cs-button-secondary,
+#pricing-1386 .cs-item:not(.cs-popular) .cs-button-transparent {
+  transition:
+    transform .2s ease,
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease !important;
+}
+
+.cs-button-transparent:hover,
+.cs-button-secondary:hover,
+#pricing-1386 .cs-item:not(.cs-popular) .cs-button-transparent:hover {
+  transform: translateY(-2px);
+  background: rgba(255,122,26,.10) !important;
+  border-color: rgba(255,122,26,.72) !important;
+  color: var(--primaryLight) !important;
+}
+
+/* Preserve the hero secondary's neutral look while keeping the same
+   movement/contrast behavior. */
+#hero-1349 .cs-button-secondary:hover {
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.48) !important;
+  color: #fff !important;
+}
+
+/* Pricing card/button corners should feel cut from the same system. */
+body.dark-mode #pricing-1386 .cs-plan-card,
+body.dark-mode #pricing-1386 .cs-button-transparent {
+  border-radius: 1.15rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-tag {
+  border-radius: 999px !important;
+}
