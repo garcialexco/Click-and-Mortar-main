@@ -48,6 +48,8 @@
         </script>
 
         {% block head %}{% endblock %}
+        <!-- Final conversion/design overrides. Plain CSS so it works even if the Sass watcher misses a rebuild. -->
+        <link rel="stylesheet" href="/assets/css/conversion.css">
 
         <title>
             {% if page.url == '/'%}
