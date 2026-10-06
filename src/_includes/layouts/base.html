@@ -13,9 +13,16 @@
         <meta property="og:title" content="{{ title }}">
         <meta property="og:description" content="{{ description }}">
         <meta property="og:type" content="website">
+        <meta property="og:site_name" content="{{ client.name }}">
         <meta property="og:url" content="https://{{ client.domain }}{{ page.url }}">
-        <meta property="og:image" content="/assets/images/logo-small.png">
-        <meta property="og:image:secure_url" content="/assets/images/logo-small.png">
+        <meta property="og:image" content="https://{{ client.domain }}/assets/images/hero.webp">
+        <meta property="og:image:secure_url" content="https://{{ client.domain }}/assets/images/hero.webp">
+        <meta property="og:image:alt" content="Click & Mortar — local growth for Western Colorado businesses">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ description }}">
+        <meta name="twitter:image" content="https://{{ client.domain }}/assets/images/hero.webp">
+        <meta name="robots" content="index,follow,max-image-preview:large">
 
         <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg?v=2">
         <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon.png">
@@ -24,6 +31,20 @@
         <meta name="msapplication-TileColor" content="#ff7a1a">
         <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
         <meta name="theme-color" content="#090d12">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "{{ client.name }}",
+          "url": "https://{{ client.domain }}",
+          "telephone": "+1-{{ client.phoneForTel }}",
+          "description": "Local growth support for Grand Junction and Western Colorado businesses.",
+          "areaServed": [
+            { "@type": "City", "name": "Grand Junction" },
+            { "@type": "AdministrativeArea", "name": "Western Colorado" }
+          ]
+        }
+        </script>
 
         <link rel="preload" as="image" href="/assets/svgs/clickmortarlogo.svg">
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
