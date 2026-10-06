@@ -550,3 +550,283 @@ body.dark-mode #contact-1388 .cs-form-note {
 #banner-843 {
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
+
+
+/* Final visual polish: softer elevation, aligned process copy, cleaner pricing */
+
+/* Softer, blurrier elevation across cards/components so sections don't run together */
+body.dark-mode #sbs-1362 .cs-item,
+body.dark-mode #services-1378 .cs-item,
+body.dark-mode #services-1290 .cs-item,
+body.dark-mode #contact-1388 .cs-form,
+body.dark-mode #pricing-1386 .cs-item,
+body.dark-mode #pricing-1386 .cs-info,
+body.dark-mode #faq-1411 .cs-faq-item,
+body.dark-mode #reviews-1411 .cs-content {
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, .26),
+    0 3px 14px rgba(0, 0, 0, .18) !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover,
+body.dark-mode #services-1290 .cs-item:hover {
+  box-shadow:
+    0 24px 72px rgba(0, 0, 0, .34),
+    0 8px 28px rgba(255, 122, 26, .07) !important;
+}
+
+/* Keep nearby cards visually separated even when their shadows overlap */
+body.dark-mode #services-1378 .cs-card-group,
+body.dark-mode #services-1290 .cs-card-group,
+body.dark-mode #pricing-1386 .cs-card-group {
+  isolation: isolate;
+}
+
+/* Simple Process: balance the heading and supporting copy */
+@media (min-width: 48rem) {
+  body.dark-mode #services-1290 .cs-content {
+    align-items: center !important;
+    gap: clamp(3rem, 7vw, 7rem) !important;
+  }
+
+  body.dark-mode #services-1290 .cs-flex-group {
+    flex: 1 1 52%;
+  }
+
+  body.dark-mode #services-1290 .cs-content > .cs-text {
+    flex: 1 1 42%;
+    max-width: 36rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+    align-self: center;
+  }
+}
+
+/* Pricing — replace the old overlapping circle layout with clean plan cards */
+body.dark-mode #pricing-1386 {
+  padding: var(--sectionPadding);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 122, 26, .055), transparent 26rem),
+    #101720 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-container {
+  width: 100%;
+  max-width: 80rem !important;
+  margin: auto;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem) !important;
+  align-items: center;
+}
+
+body.dark-mode #pricing-1386 .cs-content {
+  text-align: left !important;
+  align-items: flex-start !important;
+  max-width: 39rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-title,
+body.dark-mode #pricing-1386 .cs-text,
+body.dark-mode #pricing-1386 .cs-package,
+body.dark-mode #pricing-1386 .cs-price,
+body.dark-mode #pricing-1386 .cs-li {
+  color: #f7f8fa !important;
+}
+
+body.dark-mode #pricing-1386 .cs-text,
+body.dark-mode #pricing-1386 .cs-li,
+body.dark-mode #pricing-1386 .cs-plan-note {
+  color: #b8c3ce !important;
+  opacity: 1 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-card-group {
+  width: 100%;
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 1rem !important;
+  align-items: stretch !important;
+}
+
+body.dark-mode #pricing-1386 .cs-item {
+  width: 100%;
+  min-width: 0;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #111923 !important;
+  position: relative;
+}
+
+body.dark-mode #pricing-1386 .cs-item.cs-popular {
+  border-color: rgba(255, 122, 26, .42);
+  background:
+    linear-gradient(180deg, rgba(255, 122, 26, .07), rgba(255, 122, 26, 0) 45%),
+    #111923 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-flex {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 1.5rem 1.5rem 1.25rem !important;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  background: transparent !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 1.25rem;
+  position: relative;
+}
+
+body.dark-mode #pricing-1386 .cs-item.cs-popular .cs-flex {
+  background: transparent !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-heading {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: left;
+}
+
+body.dark-mode #pricing-1386 .cs-package {
+  margin: 0 !important;
+  font-size: clamp(1.15rem, 2vw, 1.4rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-note {
+  display: block;
+  max-width: 27rem;
+  font-size: .9rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+body.dark-mode #pricing-1386 .cs-price {
+  flex: none;
+  margin: 0 !important;
+  color: var(--primary) !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: -.035em;
+}
+
+body.dark-mode #pricing-1386 .cs-tag {
+  display: inline-flex !important;
+  position: absolute !important;
+  left: 1.5rem !important;
+  bottom: auto !important;
+  top: -.78rem !important;
+  transform: none !important;
+  padding: .42rem .7rem !important;
+  border: 1px solid rgba(255, 122, 26, .35);
+  border-radius: 999px !important;
+  background: #171d25 !important;
+  color: var(--primaryLight) !important;
+  font-size: .7rem !important;
+  line-height: 1.2;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+body.dark-mode #pricing-1386 .cs-tag::before {
+  display: none !important;
+}
+
+body.dark-mode #pricing-1386 .cs-info {
+  width: 100% !important;
+  padding: 0 1.5rem 1.5rem !important;
+  box-sizing: border-box;
+  background: transparent !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode #pricing-1386 .cs-ul {
+  width: 100%;
+  margin: 0 0 1.4rem !important;
+  padding: 1.15rem 0 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  display: grid !important;
+  gap: .7rem !important;
+  align-items: start !important;
+}
+
+body.dark-mode #pricing-1386 .cs-li {
+  display: flex !important;
+  align-items: flex-start;
+  gap: .55rem;
+  text-align: left !important;
+  font-size: .92rem !important;
+  line-height: 1.5 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: 900;
+  flex: none;
+}
+
+body.dark-mode #pricing-1386 .cs-button-transparent {
+  width: 100%;
+  min-height: 3.35rem;
+  box-sizing: border-box;
+  padding: .85rem 1.1rem !important;
+  border-radius: .8rem !important;
+  border: 1px solid rgba(255, 122, 26, .6) !important;
+  background: transparent !important;
+  color: var(--primaryLight) !important;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2 !important;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+body.dark-mode #pricing-1386 .cs-popular .cs-button-transparent {
+  background: var(--primary) !important;
+  color: #111 !important;
+  border-color: var(--primary) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-button-transparent:hover {
+  transform: translateY(-2px);
+  background: var(--primaryLight) !important;
+  color: #111 !important;
+  border-color: var(--primaryLight) !important;
+}
+
+@media (min-width: 48rem) {
+  body.dark-mode #pricing-1386 .cs-card-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  body.dark-mode #pricing-1386 .cs-container {
+    grid-template-columns: minmax(0, .8fr) minmax(34rem, 1.2fr) !important;
+  }
+}
