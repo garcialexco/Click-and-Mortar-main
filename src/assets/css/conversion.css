@@ -1886,3 +1886,15 @@ body.dark-mode #services-1378 .cs-link .cs-arrow {
     display: none !important;
   }
 }
+
+
+/* FAQ intro should stay flat at every breakpoint — no top highlight/accent line. */
+body.dark-mode #reviews-1411 .cs-content {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+body.dark-mode #reviews-1411 .cs-content::before {
+  content: none !important;
+  display: none !important;
+}
