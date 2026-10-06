@@ -2025,3 +2025,45 @@ body.dark-mode .cs-topper {
     justify-content: center !important;
   }
 }
+
+
+/* Mobile hero proof + benefit-card spacing polish. */
+@media (max-width: 47.99rem) {
+  /* Center wrapped proof points so the final "No-pressure first look"
+     sits centered instead of hanging off the left edge. */
+  #hero-1349 .cs-proof-row {
+    width: 100%;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+    column-gap: 1rem;
+    row-gap: .65rem;
+  }
+
+  #hero-1349 .cs-proof-row span {
+    justify-content: center;
+  }
+
+  /* The two Local-First / Practical cards do not need desktop-style
+     equal-height padding when stacked on a phone. */
+  body.dark-mode #sbs-1362 .cs-card-group {
+    gap: 1rem !important;
+  }
+
+  body.dark-mode #sbs-1362 .cs-item {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 1.35rem 1.25rem !important;
+  }
+
+  body.dark-mode #sbs-1362 .cs-h3 {
+    margin: 0 0 .7rem !important;
+    gap: .65rem !important;
+    align-items: center;
+  }
+
+  body.dark-mode #sbs-1362 .cs-item-text {
+    margin: 0 !important;
+    line-height: 1.55 !important;
+  }
+}
