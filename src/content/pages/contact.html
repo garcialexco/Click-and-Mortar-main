@@ -33,7 +33,7 @@ permalink: 'contact/'
             <span class="cs-topper">Start Here</span>
             <h2 class="cs-title">See what a local customer sees.</h2>
             <p class="cs-text">
-                Tell us where to find your business online. We’ll review the obvious customer-facing gaps in your Google presence, reviews, and website and point out the highest-priority opportunities worth fixing first.
+                Tell us where to find your business online. We’ll review what nearby customers see across Google, reviews, and your website, then point out the highest-priority opportunities worth fixing first.
             </p>
             <ul class="cs-ul">
                 <li class="cs-li">
@@ -47,30 +47,32 @@ permalink: 'contact/'
                 </li>
             </ul>
         </div>
-        <form class="cs-form" id="cs-form-1388" name="Local Visibility Check" netlify>
+        <form class="cs-form" id="cs-form-1388" name="Local Visibility Check" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="Local Visibility Check">
+            <p class="cs-honeypot" aria-hidden="true"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <h3 class="cs-h3">Request Your Free Check</h3>
             <label class="cs-label">
                 Name
-                <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
+                <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name" autocomplete="name">
             </label>
             <label class="cs-label cs-email">
                 Email
-                <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
+                <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email" autocomplete="email">
             </label>
             <label class="cs-label cs-phone">
                 Phone
-                <input class="cs-input" type="tel" id="phone-1388" name="phone" placeholder="Phone">
+                <input class="cs-input" type="tel" id="phone-1388" name="phone" placeholder="Phone" autocomplete="tel" inputmode="tel">
             </label>
             <label class="cs-label">
                 Business Name
-                <input class="cs-input" required type="text" id="business-1388" name="business" placeholder="Business name">
+                <input class="cs-input" required type="text" id="business-1388" name="business" placeholder="Business name" autocomplete="organization">
             </label>
             <label class="cs-label">
                 Website or Google Listing
                 <textarea class="cs-input cs-textarea" name="Message" id="message-1388" placeholder="Paste a link or tell us where to find your business..."></textarea>
             </label>
             <button class="cs-button-solid cs-submit" type="submit">Request Free Visibility Check</button>
-            <p class="cs-form-note">Free. No obligation. We’ll start with the highest-priority opportunities.</p>
+            <p class="cs-form-note">Free. No obligation. Just a practical first look.</p>
         </form>
     </div>
 </section>
