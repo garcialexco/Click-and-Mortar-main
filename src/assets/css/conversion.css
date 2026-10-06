@@ -2155,3 +2155,68 @@ body.dark-mode #services-1378 .cs-link {
     line-height: 1.5 !important;
   }
 }
+
+
+/* =========================================================
+   Final small-phone QA pass
+   ========================================================= */
+
+/* Keep service-card breathing room visually consistent on phones even
+   when descriptions have different line counts. */
+@media (max-width: 47.99rem) {
+  body.dark-mode #services-1378 .cs-item {
+    padding: 4rem 1.5rem 1.75rem !important;
+  }
+
+  body.dark-mode #services-1378 .cs-h3 {
+    margin-bottom: .75rem !important;
+  }
+
+  body.dark-mode #services-1378 .cs-item-text {
+    max-width: 30rem !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* At narrower phone widths, control the proof-row wrapping instead of
+   letting flexbox create an awkward 2 + orphan layout. */
+@media (max-width: 24.375rem) {
+  #hero-1349 .cs-proof-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, auto));
+    justify-content: center !important;
+    column-gap: .9rem !important;
+    row-gap: .55rem !important;
+  }
+
+  #hero-1349 .cs-proof-row span:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* Shift the photographic focal point slightly right on narrower phones
+     so the street/lamp/blossoms stay intentional behind the copy. */
+  #hero-1349 .cs-background img,
+  #banner-843 .cs-background img {
+    object-position: 55% center !important;
+  }
+}
+
+/* Very narrow legacy phones: stack proof points cleanly rather than
+   squeezing labels into tiny columns. */
+@media (max-width: 21.875rem) {
+  #hero-1349 .cs-proof-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  #hero-1349 .cs-proof-row span,
+  #hero-1349 .cs-proof-row span:nth-child(3) {
+    grid-column: 1 !important;
+    justify-self: center;
+  }
+
+  #hero-1349 .cs-background img,
+  #banner-843 .cs-background img {
+    object-position: 58% center !important;
+  }
+}
