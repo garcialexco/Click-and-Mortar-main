@@ -1911,3 +1911,98 @@ body.dark-mode #reviews-1411 .cs-content::before {
     margin: 0 !important;
   }
 }
+
+
+/* =========================================================
+   Launch polish: accessibility, typography, and interaction
+   ========================================================= */
+
+::selection {
+  background: rgba(255, 122, 26, .32);
+  color: #fff;
+}
+
+html {
+  scroll-padding-top: 7rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.cs-title,
+.cs-h3,
+.cs-int-title {
+  text-wrap: balance;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+.cs-button-solid,
+.cs-button-secondary,
+.cs-button-transparent,
+.cs-submit {
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(255, 154, 74, .9) !important;
+  outline-offset: 3px;
+}
+
+#how-it-works {
+  scroll-margin-top: 8rem;
+}
+
+/* Keep Netlify spam trap completely out of layout and assistive flow. */
+.cs-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Slightly sharpen the free-check form hierarchy. */
+body.dark-mode #contact-1388 .cs-form .cs-h3 {
+  margin-bottom: 1.25rem !important;
+}
+
+body.dark-mode #contact-1388 .cs-form-note {
+  margin-top: .65rem !important;
+}
+
+/* Keep sitewide section eyebrows visually consistent. */
+body.dark-mode .cs-topper {
+  letter-spacing: .11em;
+}
+
+/* Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    transition-delay: 0ms !important;
+  }
+}
