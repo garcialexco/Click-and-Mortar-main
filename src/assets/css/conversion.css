@@ -1873,3 +1873,16 @@ body.dark-mode #services-1378 .cs-link .cs-arrow {
     margin: 0 auto .9rem;
   }
 }
+
+
+/* Remove FAQ intro accent line for consistency with the rest of the site. */
+@media (max-width: 47.99rem) {
+  body.dark-mode #reviews-1411 .cs-content {
+    padding-top: 0 !important;
+  }
+
+  body.dark-mode #reviews-1411 .cs-content::before {
+    content: none !important;
+    display: none !important;
+  }
+}
