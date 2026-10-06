@@ -1175,3 +1175,166 @@ body.dark-mode #pricing-1386 .cs-button-transparent:hover {
     text-align: left;
   }
 }
+
+
+/* =========================================================
+   Final surface correction
+   Remove exterior drop shadows entirely. On this dark layout,
+   even heavily blurred shadows stack into visible rectangular
+   bands where components/sections overlap. Use subtle borders,
+   tonal gradients, and inset highlights instead.
+   ========================================================= */
+
+:root {
+  --surface-border: rgba(255,255,255,.075);
+  --surface-highlight: inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+body.dark-mode #sbs-1362 .cs-image-group,
+body.dark-mode #sbs-1362 .cs-item,
+body.dark-mode #services-1378 .cs-item,
+body.dark-mode #services-1290 .cs-item,
+body.dark-mode #contact-1388 .cs-form,
+body.dark-mode #faq-1411 .cs-faq-item,
+body.dark-mode #reviews-1411 .cs-content,
+body.dark-mode #pricing-1386 .cs-plan-card {
+  box-shadow: var(--surface-highlight) !important;
+  border-color: var(--surface-border) !important;
+}
+
+body.dark-mode #sbs-1362 .cs-box {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover,
+body.dark-mode #services-1290 .cs-item:hover {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+body.dark-mode #services-1378 .cs-item,
+body.dark-mode #services-1290 .cs-item,
+body.dark-mode #sbs-1362 .cs-item,
+body.dark-mode #contact-1388 .cs-form {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255,255,255,.018),
+    rgba(255,255,255,0) 42%
+  ) !important;
+}
+
+/* Restore normal section clipping now that no exterior shadow needs room. */
+#sbs-1362,
+#services-1378,
+#services-1290,
+#pricing-1386,
+#contact-1388 {
+  overflow: hidden !important;
+}
+
+/* =========================================================
+   Pricing proportion pass
+   ========================================================= */
+
+body.dark-mode #pricing-1386 .cs-container {
+  gap: clamp(3rem, 5vw, 4.5rem) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-content {
+  max-width: 31rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-title {
+  max-width: 10.8em !important;
+  font-size: clamp(2.5rem, 3.4vw, 3.45rem) !important;
+  line-height: 1.04 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-text {
+  max-width: 30rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-card-group {
+  gap: 1rem !important;
+  align-items: stretch !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-card {
+  min-height: 27rem !important;
+  padding: 1.45rem !important;
+  border-radius: 1.15rem !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.018), rgba(255,255,255,0) 40%),
+    #111923 !important;
+  box-shadow: var(--surface-highlight) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-popular .cs-plan-card {
+  border-color: rgba(255,122,26,.28) !important;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,.045), rgba(255,122,26,0) 38%),
+    #111923 !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-card::after {
+  opacity: .55;
+}
+
+body.dark-mode #pricing-1386 .cs-tag {
+  margin-bottom: 1rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-top {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: .9rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-package {
+  font-size: clamp(1.15rem, 1.55vw, 1.35rem) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-plan-note {
+  max-width: 22rem !important;
+  font-size: .86rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-price {
+  font-size: clamp(2rem, 3vw, 2.8rem) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-price-custom {
+  font-size: clamp(1.7rem, 2.45vw, 2.3rem) !important;
+}
+
+body.dark-mode #pricing-1386 .cs-ul {
+  margin: 1.2rem 0 1.3rem !important;
+  padding-top: 1.15rem !important;
+  gap: .62rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-button-transparent {
+  min-height: 3.25rem !important;
+}
+
+@media (min-width: 64rem) {
+  body.dark-mode #pricing-1386 .cs-container {
+    grid-template-columns: minmax(24rem, .95fr) minmax(0, 1.65fr) !important;
+  }
+
+  body.dark-mode #pricing-1386 .cs-card-group {
+    grid-template-columns: repeat(2, minmax(21rem, 1fr)) !important;
+  }
+
+  body.dark-mode #pricing-1386 .cs-content {
+    align-self: center !important;
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 76rem) {
+  body.dark-mode #pricing-1386 .cs-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.dark-mode #pricing-1386 .cs-content {
+    max-width: 42rem !important;
+  }
+}
