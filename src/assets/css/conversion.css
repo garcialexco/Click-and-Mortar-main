@@ -1661,3 +1661,44 @@ body.dark-mode #pricing-1386 .cs-button-transparent {
 body.dark-mode #pricing-1386 .cs-tag {
   border-radius: 999px !important;
 }
+
+
+/* =========================================================
+   Final two visual fixes
+   ========================================================= */
+
+/* Service icon medallions: remove the leftover ring entirely.
+   The solid circle itself masks the card's top border, so no
+   outer outline / halo is needed. */
+body.dark-mode #services-1378 .cs-picture {
+  border: 0 !important;
+  box-shadow: none !important;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,.10), rgba(255,122,26,.025)),
+    #1a2531 !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-picture {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: var(--primary) !important;
+}
+
+/* Pricing card: force the accent border and the dark surface to share
+   the exact same corner geometry, including the top corners. */
+body.dark-mode #pricing-1386 .cs-plan-card {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  background-clip: padding-box !important;
+}
+
+body.dark-mode #pricing-1386 .cs-popular .cs-plan-card {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+/* Keep the pricing CTA on the same radius family as the card rather
+   than looking like a pill inside a softer rectangle. */
+body.dark-mode #pricing-1386 .cs-button-transparent {
+  border-radius: .85rem !important;
+}
