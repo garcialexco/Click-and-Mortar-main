@@ -1483,3 +1483,88 @@ body.dark-mode #pricing-1386 .cs-plan-card {
     max-width: 16ch !important;
   }
 }
+
+
+/* =========================================================
+   Services + pricing refinement
+   ========================================================= */
+
+/* Pricing headline: stop squeezing it into a Chile-shaped column. */
+body.dark-mode #pricing-1386 .cs-content {
+  width: 100% !important;
+  max-width: 31rem !important;
+}
+
+body.dark-mode #pricing-1386 .cs-title {
+  width: 100% !important;
+  max-width: none !important;
+  font-size: clamp(2.35rem, 2.8vw, 3rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.03em !important;
+  text-wrap: balance;
+}
+
+body.dark-mode #pricing-1386 .cs-text {
+  width: 100% !important;
+  max-width: 31rem !important;
+}
+
+@media (min-width: 64rem) {
+  body.dark-mode #pricing-1386 .cs-container {
+    grid-template-columns: minmax(30rem, .98fr) minmax(0, 1.45fr) !important;
+    gap: clamp(3.5rem, 5vw, 5rem) !important;
+  }
+}
+
+/* What We Improve: make the orange-accent state the default. */
+body.dark-mode #services-1378 .cs-item {
+  border-color: rgba(255,122,26,.26) !important;
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    background .22s ease !important;
+}
+
+/* Mask the card's top border behind the floating icon so it reads
+   as a true break instead of a line running through the circle. */
+body.dark-mode #services-1378 .cs-picture {
+  position: relative;
+  z-index: 3;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,.16), rgba(255,122,26,.055)),
+    #1a2531 !important;
+  border-color: rgba(255,122,26,.48) !important;
+  box-shadow:
+    0 0 0 .6rem #101720,
+    inset 0 1px 0 rgba(255,255,255,.045) !important;
+}
+
+/* New hover state: slightly brighter card, filled icon medallion,
+   and a stronger arrow affordance rather than simply turning the border orange. */
+body.dark-mode #services-1378 .cs-item:hover {
+  transform: translateY(-.22rem);
+  border-color: rgba(255,122,26,.58) !important;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,.055), rgba(255,255,255,0) 48%),
+    #131d28 !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-picture {
+  background: var(--primary) !important;
+  border-color: var(--primaryLight) !important;
+  transform: translateY(-.12rem) scale(1.025);
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-picture .cs-icon {
+  filter: brightness(0) !important;
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-link {
+  border-color: var(--primary) !important;
+  background: var(--primary) !important;
+  transform: translateY(-2px);
+}
+
+body.dark-mode #services-1378 .cs-item:hover .cs-link .cs-arrow {
+  filter: brightness(0) !important;
+}
