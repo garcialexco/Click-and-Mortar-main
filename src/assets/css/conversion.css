@@ -1898,3 +1898,16 @@ body.dark-mode #reviews-1411 .cs-content::before {
   content: none !important;
   display: none !important;
 }
+
+
+/* Remove the old CodeStitch process arrows on mobile. */
+@media (max-width: 47.99rem) {
+  #services-1290 .cs-item::after {
+    content: none !important;
+    display: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+  }
+}
