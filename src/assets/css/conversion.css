@@ -1702,3 +1702,19 @@ body.dark-mode #pricing-1386 .cs-popular .cs-plan-card {
 body.dark-mode #pricing-1386 .cs-button-transparent {
   border-radius: .85rem !important;
 }
+
+
+/* =========================================================
+   Service card hover timing sync
+   Keep the card, icon medallion, icon, and arrow moving as one unit.
+   ========================================================= */
+body.dark-mode #services-1378 .cs-item,
+body.dark-mode #services-1378 .cs-picture,
+body.dark-mode #services-1378 .cs-picture .cs-icon,
+body.dark-mode #services-1378 .cs-link,
+body.dark-mode #services-1378 .cs-link .cs-arrow {
+  transition-property: transform, background-color, background, border-color, color, filter !important;
+  transition-duration: 220ms !important;
+  transition-timing-function: ease !important;
+  transition-delay: 0ms !important;
+}
