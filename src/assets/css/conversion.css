@@ -2067,3 +2067,9 @@ body.dark-mode .cs-topper {
     line-height: 1.55 !important;
   }
 }
+
+
+/* Remove service-card arrow circles at every breakpoint. */
+body.dark-mode #services-1378 .cs-link {
+  display: none !important;
+}
