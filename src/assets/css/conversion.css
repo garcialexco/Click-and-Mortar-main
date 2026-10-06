@@ -2006,3 +2006,22 @@ body.dark-mode .cs-topper {
     transition-delay: 0ms !important;
   }
 }
+
+
+/* Center the homepage trust strip on mobile only. */
+@media (max-width: 47.99rem) {
+  #trust-strip .cs-container {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  #trust-strip .cs-trust-label {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  #trust-strip .cs-trust-points {
+    width: 100%;
+    justify-content: center !important;
+  }
+}
