@@ -1838,3 +1838,38 @@ body.dark-mode #services-1378 .cs-link .cs-arrow {
     transition-duration: 220ms !important;
   }
 }
+
+
+/* =========================================================
+   FAQ/mobile nav micro-polish
+   ========================================================= */
+
+@media (max-width: 63.9375rem) {
+  /* Remove the mobile header divider line under the top bar. */
+  body.dark-mode #cs-navigation .cs-top-bar::before,
+  #cs-navigation .cs-top-bar::before {
+    display: none !important;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  /* FAQ intro: replace the accidental full-width inset line with
+     a short intentional orange accent above "Straight Answers". */
+  body.dark-mode #reviews-1411 .cs-content {
+    box-shadow: none !important;
+    border: 0 !important;
+    position: relative;
+    padding-top: 1.15rem;
+  }
+
+  body.dark-mode #reviews-1411 .cs-content::before {
+    content: "";
+    width: 2.75rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--primary);
+    opacity: .9;
+    display: block;
+    margin: 0 auto .9rem;
+  }
+}
