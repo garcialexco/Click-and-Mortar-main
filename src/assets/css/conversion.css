@@ -544,3 +544,9 @@ body.dark-mode #contact-1388 .cs-form-note {
     font-size: clamp(2.8rem, 13vw, 4rem) !important;
   }
 }
+
+
+/* Supporting page divider — mirrors the homepage section separation */
+#banner-843 {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
