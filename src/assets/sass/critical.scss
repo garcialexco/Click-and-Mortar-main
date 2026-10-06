@@ -2,269 +2,167 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    @keyframes floatAnimation {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2rem);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes floatAnimation2 {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-3rem);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
     #hero-1349 {
-        /* 250px - 500px - leaving extra space for the navigation */
-        padding: clamp(15.625rem, 35.95vw, 25rem) calc(16 / 16 * 1rem) 0;
-        /* 200px - 250px */
-        padding-bottom: clamp(12.5rem, 16.5vw, 15.625rem);
+        min-height: clamp(42rem, 88vh, 54rem);
+        padding: clamp(10rem, 18vw, 13rem) 1rem clamp(5rem, 10vw, 8rem);
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
-        z-index: 1;
+        display: flex;
+        align-items: center;
+        isolation: isolate;
+        background: #090d12;
 
         &:before {
-            /* Overlay */
             content: "";
-            width: 100%;
-            height: 30%;
-            background: -webkit-gradient(
-                linear,
-                left top,
-                left bottom,
-                from(rgba(0, 0, 0, 1)),
-                to(rgba(0, 0, 0, 0))
-            );
-            background: -o-linear-gradient(
-                top,
-                rgba(0, 0, 0, 1) 0%,
-                rgba(0, 0, 0, 0) 100%
-            );
-            background: linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 1) 0%,
-                rgba(0, 0, 0, 0) 100%
-            );
-            opacity: 1;
             position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            /* prevents the cursor from interacting with it */
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(9, 13, 18, 0.97) 0%, rgba(9, 13, 18, 0.82) 48%, rgba(9, 13, 18, 0.45) 100%),
+                linear-gradient(0deg, rgba(9, 13, 18, 0.65), transparent 45%);
+        }
+
+        &:after {
+            content: "";
+            width: clamp(18rem, 45vw, 40rem);
+            height: clamp(18rem, 45vw, 40rem);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 122, 26, 0.18), rgba(255, 122, 26, 0) 68%);
+            position: absolute;
+            right: -12rem;
+            bottom: -14rem;
+            z-index: -1;
             pointer-events: none;
         }
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
+            max-width: 80rem;
             margin: auto;
             display: flex;
             justify-content: center;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
             width: 100%;
-            max-width: calc(630 / 16 * 1rem);
+            max-width: 47rem;
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
         }
 
         .cs-topper {
-            font-size: calc(20 / 16 * 1rem);
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
             line-height: 1.2em;
             text-transform: uppercase;
-            text-align: inherit;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: calc(8 / 16 * 1rem);
-            display: block;
+            letter-spacing: 0.16em;
+            font-weight: 800;
+            color: #151515;
+            background: var(--primary);
+            border-radius: 999px;
+            padding: 0.55rem 0.85rem;
+            margin-bottom: 1.25rem;
+            display: inline-flex;
         }
 
         .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: inherit;
-            max-width: 20ch;
-            margin: 0 0 calc(16 / 16 * 1rem) 0;
+            font-size: clamp(2.75rem, 8vw, 5.25rem);
+            font-weight: 900;
+            line-height: 0.98em;
+            letter-spacing: -0.045em;
+            max-width: 12ch;
+            margin: 0 0 1.5rem;
             color: #fff;
-            position: relative;
+            text-wrap: balance;
         }
 
         .cs-text {
-            font-size: calc(20 / 16 * 1rem);
-            line-height: 1.5em;
-            text-align: inherit;
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.65em;
             width: 100%;
-            /* 464px - 622px */
-            max-width: clamp(29rem, 60vw, 38.785rem);
-            margin: 0 0 calc(40 / 16 * 1rem) 0;
-            color: #fff;
+            max-width: 41rem;
+            margin: 0 0 2rem;
+            color: #dbe2ea;
+        }
+
+        .cs-actions {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-button-solid,
+        .cs-button-secondary {
+            min-height: 3.5rem;
+            padding: 0.1rem 1.5rem;
+            border-radius: 0.85rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 1.2;
+            font-weight: 800;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
         }
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            line-height: calc(56 / 16 * 1rem);
-            text-decoration: none;
-            font-weight: 700;
-            overflow: hidden;
-            margin: 0;
-            color: #fff;
-            padding: 0 calc(48 / 16 * 1rem);
-            border-radius: calc(30 / 16 * 1rem);
-            background-color: var(--primary);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            transition: color 0.3s;
+            color: #111;
+            background: var(--primary);
+            box-shadow: 0 14px 36px rgba(255, 122, 26, 0.22);
 
             &:before {
-                content: "";
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 0%;
-                background: #fff;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
+                display: none;
             }
 
             &:hover {
-                color: var(--primary);
+                color: #111;
+                background: var(--primaryLight);
+                transform: translateY(-2px);
+            }
+        }
+
+        .cs-button-secondary {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+
+            &:hover {
+                border-color: rgba(255, 255, 255, 0.5);
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateY(-2px);
+            }
+        }
+
+        .cs-proof-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem 1rem;
+            color: #aeb9c5;
+            font-size: 0.875rem;
+            line-height: 1.4;
+
+            span {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.45rem;
+
                 &:before {
-                    width: 100%;
+                    content: "✓";
+                    color: var(--primary);
+                    font-weight: 900;
                 }
-            }
-        }
-
-        .cs-bubbles {
-            /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
-            font-size: min(2vw, 0.5em);
-            position: absolute;
-            z-index: -1;
-        }
-
-        .cs-bubbles1 {
-            width: calc(680 / 16 * 1em);
-            height: calc(724 / 16 * 1em);
-            right: calc(-190 / 16 * 1rem);
-            /* changes to 172 at large desktop */
-            top: 0;
-
-            &:before {
-                /* white border bubble */
-                content: "";
-                width: calc(622 / 16 * 1em);
-                height: calc(622 / 16 * 1rem);
-                background: transparent;
-                border: 1px solid #fff;
-                border-radius: 50%;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                animation-name: floatAnimation;
-                animation-duration: 7s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
-            }
-
-            &:after {
-                /* orange bubble */
-                content: "";
-                width: calc(546 / 16 * 1em);
-                height: calc(546 / 16 * 1em);
-                background: var(--primary);
-                opacity: 0.8;
-                border-radius: 50%;
-                display: block;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                z-index: -1;
-                animation-name: floatAnimation2;
-                animation-duration: 10s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
-            }
-        }
-
-        .cs-bubbles2 {
-            width: calc(330 / 16 * 1rem);
-            height: calc(476 / 16 * 1rem);
-            /* changes to 160px at larger desktop */
-            left: calc(-220 / 16 * 1rem);
-            /* removed at larger desktop */
-            bottom: calc(-260 / 16 * 1rem);
-
-            &:before {
-                /* white border bubble */
-                content: "";
-                width: calc(330 / 16 * 1rem);
-                height: calc(330 / 16 * 1rem);
-                background: transparent;
-                border: 1px solid #fff;
-                border-radius: 50%;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                bottom: 0;
-                right: 0;
-                animation-name: floatAnimation;
-                animation-duration: 5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
-            }
-
-            &:after {
-                /* orange bubble */
-                content: "";
-                width: calc(260 / 16 * 1rem);
-                height: calc(260 / 16 * 1rem);
-                background: var(--primary);
-                opacity: 0.8;
-                border-radius: 50%;
-                display: block;
-                position: absolute;
-                top: 0;
-                right: calc(40 / 16 * 1rem);
-                z-index: -1;
-                animation-name: floatAnimation2;
-                animation-duration: 14s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: infinite;
             }
         }
 
@@ -273,103 +171,56 @@
             height: 100%;
             display: block;
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             z-index: -2;
 
             &:before {
-                /* Overlay */
                 content: "";
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.4;
                 position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
+                inset: 0;
+                background: rgba(9, 13, 18, 0.2);
                 z-index: 1;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
             }
 
             img {
                 position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
+                inset: 0;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
-                /* makes the top of the image start at the top of the parent */
-                object-position: top;
+                object-position: center;
+                filter: saturate(0.82) contrast(1.05);
             }
         }
     }
 }
 
-/* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #hero-1349 {
-        .cs-container {
-            align-items: flex-start;
+        .cs-actions {
+            width: auto;
         }
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #hero-1349 {
+        padding-top: 11rem;
 
         .cs-content {
-            text-align: left;
-            align-items: flex-start;
-        }
-
-        .cs-bubbles {
-            font-size: 1em;
-        }
-
-        .cs-bubbles1 {
-            /* changes to auto at large desktop */
-            right: calc(-428 / 16 * 1rem);
+            max-width: 49rem;
         }
     }
 }
 
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #hero-1349 {
-        .cs-bubbles1 {
-            /* 200px - 450px */
-            margin-left: clamp(12.5rem, 20vw, 28.125rem);
-            top: calc(172 / 16 * 1rem);
-            right: auto;
-            left: 50%;
-        }
-    }
-}
-
-/* Large Desktop Parallax Effect - 1600px */
 @media only screen and (min-width: 100rem) {
     #hero-1349 {
         .cs-background {
-            background: url("/assets/images/hero.webp");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: url("/assets/images/hero.webp") center / cover no-repeat fixed;
+
             img {
                 display: none;
             }
         }
     }
 }
-
-/* Larger Desktop - 1800px */
-@media only screen and (min-width: 112.5rem) {
-    #hero-1349 {
-        .cs-bubbles2 {
-            margin-right: calc(800 / 16 * 1rem);
-            right: 50%;
-            left: auto;
-            top: calc(210 / 16 * 1rem);
-            bottom: auto;
-        }
-    }
-}
-
-                                
