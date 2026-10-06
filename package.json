@@ -9,8 +9,9 @@
         "build:sass": "sass --style=compressed src/assets/sass:./public/assets/css",
         "watch:sass": "sass --watch src/assets/sass:./public/assets/css",
         "watch:cms": "npx netlify-cms-proxy-server",
-        "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-        "build": "npm-run-all --parallel build:*"
+        "start": "del-cli ./public --force && npm-run-all --parallel watch:eleventy watch:sass",
+        "build": "npm-run-all --parallel build:*",
+        "start:cms": "npm-run-all --parallel watch:eleventy watch:sass watch:cms"
     },
     "repository": {
         "type": "git",
