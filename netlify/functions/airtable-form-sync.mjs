@@ -11,6 +11,7 @@ const LEAD_FIELDS = {
   pipelineStage: "fldrjg96HDL0pS9Q9",
   leadSource: "fldAEjoyQNZWx5k7o",
   businessName: "fldC6OnN0IdI2IbrT",
+  submissionPage: "fldtvMv7wAebTjJB0",
 };
 
 const CHECK_FIELDS = {
@@ -93,6 +94,7 @@ export default {
     const phone = clean(data.phone);
     const business = clean(data.business);
     const listing = clean(data.Message || data.message);
+    const source = clean(data.source) || "Website";
 
     if (!name || !email || !business) {
       console.warn("Skipping incomplete Local Visibility Check submission.", {
@@ -109,6 +111,7 @@ export default {
       [LEAD_FIELDS.businessName]: business,
       [LEAD_FIELDS.pipelineStage]: "Audit Requested",
       [LEAD_FIELDS.leadSource]: "Website Form",
+      [LEAD_FIELDS.submissionPage]: source,
     };
 
     if (phone) leadFields[LEAD_FIELDS.phone] = phone;
@@ -121,13 +124,13 @@ export default {
 
     const normalizedUrl = normalizeUrl(listing);
     const checkFields = {
-      [CHECK_FIELDS.checkName]: `${business} — Website Request`,
+      [CHECK_FIELDS.checkName]: `${business} — ${source}`,
       [CHECK_FIELDS.lead]: [lead.id],
       [CHECK_FIELDS.businessName]: business,
       [CHECK_FIELDS.status]: "Requested",
       [CHECK_FIELDS.internalNotes]: listing
-        ? `Created automatically from the Click & Mortar website form. Submitted listing/site: ${listing}`
-        : "Created automatically from the Click & Mortar website form.",
+        ? `Created automatically from the Click & Mortar ${source}. Submitted listing/site: ${listing}`
+        : `Created automatically from the Click & Mortar ${source}.`,
     };
 
     if (normalizedUrl) {
