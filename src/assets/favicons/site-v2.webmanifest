@@ -1,0 +1,15 @@
+{
+  "name": "Click & Mortar",
+  "short_name": "Click & Mortar",
+  "icons": [
+    {
+      "src": "/assets/favicons/click-mortar-mark-v2.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#090d12",
+  "background_color": "#090d12",
+  "display": "standalone"
+}
