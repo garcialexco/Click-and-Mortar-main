@@ -6,10 +6,10 @@
 @media only screen and (min-width: 0em) {
   :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #D23DD2;
-    --primaryLight: #ff5bf4;
-    --secondary: #A630FD;
-    --secondaryLight: #bd61ff;
+    --primary: #ff7a1a;
+    --primaryLight: #ff9b4a;
+    --secondary: #ffb15f;
+    --secondaryLight: #ffd1a3;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -1423,5 +1423,73 @@ html {
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer-1390 {
     background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+/*-- -------------------------- -->
+<---   Click & Mortar Refresh   -->
+<--- -------------------------- -*/
+@media only screen and (min-width: 0rem) {
+  html {
+    scroll-behavior: smooth;
+    background: #090d12;
+  }
+  body.dark-mode {
+    background: radial-gradient(circle at 15% 10%, rgba(255, 122, 26, 0.08), transparent 28rem), #090d12;
+  }
+  body.dark-mode #cs-navigation:before {
+    background: rgba(9, 13, 18, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+  }
+  body.dark-mode #cs-navigation .cs-top-bar:before {
+    background-color: rgba(255, 255, 255, 0.14);
+  }
+  body.dark-mode #cs-navigation .cs-top-link {
+    color: #d7dde5;
+  }
+  body.dark-mode #cs-navigation .cs-li-link {
+    color: #f7f8fa;
+  }
+  body.dark-mode #cs-navigation .cs-li-link:hover, body.dark-mode #cs-navigation .cs-li-link.cs-active {
+    color: var(--primary);
+  }
+  .cs-button-solid {
+    box-shadow: 0 10px 30px rgba(255, 122, 26, 0.2);
+  }
+  #cta-1071 {
+    background-color: #0d131a;
+  }
+  #cta-1071:before {
+    background: linear-gradient(90deg, rgba(9, 13, 18, 0.94), rgba(9, 13, 18, 0.76));
+  }
+  #cta-1071 .cs-topper {
+    color: var(--primaryLight);
+  }
+  #cta-1071 .cs-button-solid {
+    background: var(--primary);
+    color: #111;
+  }
+  #cta-1071 .cs-button-solid:before {
+    background: #fff;
+  }
+  #cta-1071 .cs-button-solid:hover {
+    color: #111;
+  }
+  #cta-1071 .cs-button-transparent {
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  #cta-1071 .cs-button-transparent:hover {
+    border-color: #fff;
+  }
+  #footer-1390 {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media only screen and (min-width: 64rem) {
+  body.dark-mode.scroll #cs-navigation:before {
+    background: rgba(9, 13, 18, 0.97);
+  }
+  body.dark-mode.scroll #cs-navigation .cs-li-link {
+    color: #f7f8fa;
   }
 }/*# sourceMappingURL=root.css.map */
