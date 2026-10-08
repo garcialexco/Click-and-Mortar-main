@@ -2,3 +2,12 @@
 .cache
 node_modules
 public
+
+# Temporary asset-upload payloads; never commit or deploy.
+/.asset-payload/
+/.asset-staging/
+/.tmp-hero/
+
+# Local OS/editor clutter.
+.DS_Store
+*.log
