@@ -22,6 +22,14 @@
 
 The desktop variant is about 85% smaller. The browser chooses a candidate based on viewport width and pixel density; high-density mobile screens may use a larger variant. These are asset-size measurements, not a live speed score.
 
+## Validation completed
+
+- `npm ci --no-audit --no-fund` and `npm run build` passed.
+- Generated HTML checks passed for all six public pages: one H1, distinct branded titles, canonical URLs, JSON-LD parsing, local links and assets, matching responsive image preloads, form privacy notices, and Netlify form fields.
+- The sitemap parses and the filler blog pages no longer generate.
+- Chromium checks at 390, 1440, and 1920 CSS pixels found no horizontal overflow. FAQ expansion and native form validation passed. The browser selected the 640px hero on the tested mobile viewport and the 1365px hero on desktop.
+- Reviewed mobile homepage/privacy and desktop services screenshots. External scripts were blocked during local browser checks; production Analytics and form delivery remain unverified.
+
 ## Launch checks requiring production access
 
 1. Confirm which Netlify project and repository deploy `www.clickmortar.app`. This change targets the current source in `garcialexco/Click-and-Mortar-main`; the separate `Click-and-Mortar` repository has older source.
