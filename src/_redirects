@@ -1,1 +1,4 @@
 
+https://clickmortar.app/* https://www.clickmortar.app/:splat 301!
+http://clickmortar.app/* https://www.clickmortar.app/:splat 301!
+http://www.clickmortar.app/* https://www.clickmortar.app/:splat 301!

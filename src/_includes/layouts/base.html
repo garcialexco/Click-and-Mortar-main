@@ -10,7 +10,7 @@
         <meta name="keywords" content="">
         <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}">
 
-        <meta property="og:title" content="{{ title }}">
+        <meta property="og:title" content="{{ title }} | {{ client.name }}">
         <meta property="og:description" content="{{ description }}">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="{{ client.name }}">
@@ -23,7 +23,7 @@
         <meta property="og:image:height" content="630">
         <meta property="og:image:alt" content="Click & Mortar">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:title" content="{{ title }} | {{ client.name }}">
         <meta name="twitter:description" content="{{ description }}">
         <meta name="twitter:image" content="https://{{ client.domain }}/assets/images/click-mortar-social-v4.png">
         <meta name="twitter:image:alt" content="Click & Mortar">
@@ -73,8 +73,8 @@
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
-        {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}">
+        {% if preloadImg %}
+            <link rel="preload" as="image" href="{{ preloadImg }}"{% if preloadSrcset %} imagesrcset="{{ preloadSrcset }}" imagesizes="100vw"{% endif %} fetchpriority="high">
         {% endif %}
 
         <link rel="stylesheet" href="/assets/css/root.css">
@@ -93,13 +93,7 @@
         <!-- Final conversion/design overrides. Plain CSS so it works even if the Sass watcher misses a rebuild. -->
         <link rel="stylesheet" href="/assets/css/conversion.css">
 
-        <title>
-            {% if page.url == '/'%}
-                {{ title }} | {{ client.name }} | {{ client.address.city }}, {{ client.address.state }}
-            {% else %}
-                {{ title }} | {{ client.name }}
-            {% endif %}
-        </title>
+        <title>{{ title }} | {{ client.name }}</title>
     </head>
     <body class="dark-mode">
         <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>

@@ -216,6 +216,7 @@ body.dark-mode.scroll #cs-navigation::before {
 }
 
 #hero-1349 .cs-background {
+  background: none !important;
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -2242,3 +2243,11 @@ body.dark-mode #services-1378 .cs-link {
   #cm-delivery .cm-delivery-grid { grid-template-columns: minmax(0, 1fr); }
   #cm-delivery .cm-delivery-intro { font-size: 1rem; }
 }
+
+/* Readable privacy page, using the site's colors and spacing. */
+.cm-text-page { padding: clamp(12rem, 18vw, 15rem) 1rem 5rem; }
+.cm-text-container { max-width: 52rem; margin: auto; }
+.cm-text-container h1 { color: var(--headerColor); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin: 0 0 1.5rem; }
+.cm-text-container h2 { color: var(--headerColor); font-size: 1.5rem; margin: 2.5rem 0 .75rem; }
+.cm-text-container p { color: var(--bodyTextColor); font-size: 1rem; line-height: 1.8; margin: 0 0 1rem; }
+.cm-text-container a, .cs-form-note a, #services-1378 .cs-text a { color: var(--primaryLight); text-decoration: underline; text-underline-offset: .2em; }
