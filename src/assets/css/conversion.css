@@ -2220,3 +2220,25 @@ body.dark-mode #services-1378 .cs-link {
     object-position: 58% center !important;
   }
 }
+
+
+/* Click & Mortar Local Growth System — scoped deliverables section. */
+#cm-delivery { padding: clamp(4rem, 7vw, 6rem) 1.25rem; background: #0b0f14; color: #f4f5f7; }
+#cm-delivery .cm-delivery-container { width: 100%; max-width: 80rem; margin-inline: auto; }
+#cm-delivery .cm-delivery-topper { display: block; margin-bottom: 1rem; font-size: .8rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; color: #ff9a4a; }
+#cm-delivery .cm-delivery-title { max-width: 48rem; margin: 0 0 1.2rem; color: #f5f6f7; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.13; text-wrap: balance; }
+#cm-delivery .cm-delivery-intro { max-width: 56rem; margin: 0 0 2.3rem; color: #bdc7d0; font-size: 1.075rem; line-height: 1.75; }
+#cm-delivery .cm-delivery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+#cm-delivery .cm-delivery-card { box-sizing: border-box; border: 1px solid rgba(255,255,255,.12); border-radius: 1rem; padding: clamp(1.4rem, 3vw, 2rem); background: #121a22; }
+#cm-delivery .cm-delivery-number { color: #ff9a4a; display: block; margin-bottom: .75rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 750; font-size: .76rem; }
+#cm-delivery .cm-delivery-card h3 { color: #f8fafc; margin: 0 0 .65rem; font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.3; }
+#cm-delivery .cm-delivery-card p { color: #bdc7d0; margin: 0; line-height: 1.7; font-size: 1rem; }
+#cm-delivery .cm-delivery-boundaries { margin-top: 1.2rem; border-radius: 1rem; padding: clamp(1.5rem, 3vw, 2rem); background: #162029; border: 1px solid rgba(255,154,74,.29); }
+#cm-delivery .cm-delivery-boundaries h3 { color: #fafafa; font-size: 1.35rem; margin: 0 0 .75rem; }
+#cm-delivery .cm-delivery-boundaries p { color: #c9d1d8; line-height: 1.75; margin: 0 0 1.3rem; }
+#cm-delivery .cm-delivery-link { display: inline-flex; gap: .5rem; align-items: center; color: #ffb16e; text-decoration: underline; font-weight: 800; text-underline-offset: .3em; }
+#cm-delivery .cm-delivery-link:hover { color: #fff; }
+@media (max-width: 47.99rem) {
+  #cm-delivery .cm-delivery-grid { grid-template-columns: minmax(0, 1fr); }
+  #cm-delivery .cm-delivery-intro { font-size: 1rem; }
+}

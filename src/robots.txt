@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://clickmortar.app/sitemap.xml
+Sitemap: https://www.clickmortar.app/sitemap.xml
