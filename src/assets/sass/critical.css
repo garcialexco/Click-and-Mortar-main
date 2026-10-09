@@ -167,10 +167,8 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: cover;
+    object-position: center;
     filter: saturate(0.82) contrast(1.05);
   }
 }
@@ -189,9 +187,11 @@
 }
 @media only screen and (min-width: 100rem) {
   #hero-1349 .cs-background {
-    background: url("/assets/images/hero.webp") center/cover no-repeat fixed;
+    background: none;
   }
   #hero-1349 .cs-background img {
-    display: none;
+    display: block;
   }
-}/*# sourceMappingURL=critical.css.map */
+}
+
+/*# sourceMappingURL=critical.css.map */
