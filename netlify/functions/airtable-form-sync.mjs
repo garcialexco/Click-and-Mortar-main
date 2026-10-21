@@ -76,10 +76,10 @@ export default {
   async formSubmitted(event) {
     const data = event?.data || {};
 
-    // Ignore any future forms that are not the Click & Mortar visibility-check form.
+    // Accept the current website health-check form and legacy visibility-check submissions.
     if (
       data["form-name"] &&
-      data["form-name"] !== "Local Visibility Check"
+      !["Website Health Check", "Local Visibility Check"].includes(data["form-name"])
     ) {
       return;
     }
@@ -97,7 +97,7 @@ export default {
     const source = clean(data.source) || "Website";
 
     if (!name || !email || !business) {
-      console.warn("Skipping incomplete Local Visibility Check submission.", {
+      console.warn("Skipping incomplete Website Health Check submission.", {
         name: Boolean(name),
         email: Boolean(email),
         business: Boolean(business),
@@ -139,7 +139,7 @@ export default {
 
     await createAirtableRecord(VISIBILITY_CHECKS_TABLE_ID, checkFields);
 
-    console.log("Synced Local Visibility Check submission to Airtable.", {
+    console.log("Synced Website Health Check submission to Airtable.", {
       leadRecordId: lead.id,
       business,
     });
